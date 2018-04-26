@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear">
+        <Button
+            android:text="Playing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playingButton"
+            android:layout_marginLeft="-5dip"
+            android:layout_marginRight="-5dip"
+            android:layout_marginTop="-5dip"
+            android:layout_marginBottom="-5dip"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_weight="1"
+            android:textColor="#bebebe" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#bebebe" />
+        <Button
+            android:text="Artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/artistButton"
+            android:layout_marginLeft="-5dip"
+            android:layout_marginRight="-5dip"
+            android:layout_marginTop="-5dip"
+            android:layout_marginBottom="-5dip"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_weight="1"
+            android:textColor="#bebebe" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#bebebe" />
+        <Button
+            android:text="Songs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/songsButton"
+            android:layout_marginLeft="-5dip"
+            android:layout_marginRight="-5dip"
+            android:layout_marginTop="-5dip"
+            android:layout_marginBottom="-5dip"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_weight="1"
+            android:textColor="#bebebe" />
+    </LinearLayout>
+    <ImageView
+        android:src="@drawable/music"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:id="@+id/albumImage"
+        android:layout_below="@id/linear" />
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:id="@+id/seekBar"
+        android:layout_below="@id/albumImage"
+        android:progressTint="#bebebe"
+        android:thumbTint="@android:color/transparent"
+        android:padding="0dp"
+        android:layout_marginTop="-5dip" />
+    <TextView
+        android:text="Song"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/songText"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_below="@id/seekBar" />
+    <TextView
+        android:text="Artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/artistText"
+        android:gravity="center"
+        android:layout_below="@id/songText" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/artistText"
+        android:gravity="center">
+        <ImageButton
+            android:src="@drawable/backward"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/backButton"
+            style="?android:attr/borderlessButtonStyle" />
+        <ImageButton
+            android:src="@drawable/play"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/playButton"
+            style="?android:attr/borderlessButtonStyle" />
+        <ImageButton
+            android:src="@drawable/forward"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/forwardButton"
+            style="?android:attr/borderlessButtonStyle" />
+    </LinearLayout>
+</RelativeLayout>
